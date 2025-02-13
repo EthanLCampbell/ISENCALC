@@ -1,7 +1,7 @@
 # Compressible Aerodynamics Code
 ## Overview
 
-This repository contains a set of MATLAB scripts and functions designed to model compressible aerodynamics, including key calculations for shock waves, flow properties, and performance analysis in high-speed flows. The code handles both subsonic and supersonic regimes, offering a range of methods for solving the governing equations of compressible flow.
+This repository contains a set of Python scripts and functions designed to model compressible aerodynamics, including key calculations for shock waves, flow properties, and performance analysis in high-speed flows. The code handles both subsonic and supersonic regimes, offering a range of methods for solving the governing equations of compressible flow.
 Features
 
 ### Working Features

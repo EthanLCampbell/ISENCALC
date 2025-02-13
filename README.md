@@ -6,11 +6,12 @@ Features
 
 ### Working Features
 
-+ Isentropic Relations: Solve for isentropic/stagnation relations given specific heat ratio and mach number or any stagnation relation
++ Isentropic Relations: Solve for isentropic/stagnation relations 
++ Normal Shock Relations: Solve for downstream/upstream ratios and conditions 
 
 ### Future Capability
 
-+  Shock Calculations: Compute shock positions, shock angles, and downstream flow properties. [TBD]
++  Positional and oblique shock solving: Compute shock positions, shock angles, and oblique shock relations  [TBD]
 +  Static Thermodynamic Values: Compute static thermodynamic values across compressions and expansions [TBD]
 +  Succcessive shock/expansion train problem
 +  Diamond airfoil problem
@@ -31,4 +32,18 @@ The object input parameter may take any of the following values:
 + "Rhot/Rho" - Stagnation density ratio
 + "A/A*" - Sonic area ratio
 + "Mach_angle" - angle of pressure wave / mach wave propagation
-+ "P-M Angle" - prandtl-meyer function angle 
++ "P-M Angle" - prandtl-meyer function angle
+
+### Normal Shock Relations
+To calculate normal shock ratios, open compressible_flows_main.py and edit the inputs of the following line: 
+
+`config = normal_shock_ratios(1.4, {"P02/P01": 0.4986428})`
+
+In the above case, 1.4 is equal to 'gamma', the specific heat ratio of the working fluid. 
+The object input parameter may take any of the following values:
++ "Mach1" - Upstream mach number 
++ "Mach2" - Downstream mach number
++ "P2/P1" - Static pressure ratio
++ "T2/T1" - Static temperature ratio
++ "Rho2/Rho1" - Static density ratio
++ "P02/P01" - Stagnation pressure ratio

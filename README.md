@@ -47,3 +47,16 @@ The object input parameter may take any of the following values:
 + "T2/T1" - Static temperature ratio
 + "Rho2/Rho1" - Static density ratio
 + "P02/P01" - Stagnation pressure ratio
+
+### Oblique Shockwave 
+To calculate oblique shock ratios, open compressible_flows_main.py and edit the inputs of the following line: 
+
+`config = oblique_shock_ratios(1.4, {"Mach1": 2.5, "delta": 20})`
+
+In the above case, 1.4 is equal to 'gamma', the specific heat ratio of the working fluid. 
+The object input parameter must have the following value:
++ "delta" - turning angle of the working fluid
+As well as one of the following parameters
++ "Mach1" - Upstream mach number 
++ (other inputs WIP)
+

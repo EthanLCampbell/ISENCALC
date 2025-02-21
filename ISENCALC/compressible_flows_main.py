@@ -17,6 +17,9 @@ import os
 from isentropic_relations import isentropic_1D_ratios
 from normal_shock_relations import normal_shock_ratios
 from oblique_shock_relations import oblique_shock_ratios
+
+##====== CALLING FUNCTIONS ===================================================##
+
 #-------ISENTROPIC PROBLEMS----------------------------------------------------+
 
 '''
@@ -51,8 +54,16 @@ print("\n\n=== NORMAL SHOCK RELATIONS OUTPUTS === \n")
 config = normal_shock_ratios(1.4, {"P02/P01": 0.4986428})
 print(config)
 
+
 # Oblique Shockwave
+'''
+Example inputs (all equivalent to M1=2.5)
+    "Mach1": 2.5 (required input for all)
+    "theta_w": 20 (turn angle of fluid, weak shock)
+    "beta": 30 (wave angle)
+    
+'''
 print("\n\n=== OBLIQUE SHOCK RELATIONS OUTPUTS === \n")
-config = oblique_shock_ratios(1.4, {"Mach1": 2.5, "delta": math.radians(20)})
+config = oblique_shock_ratios(1.4, {"Mach1": 2.5, "delta": 20})
 print(config)
 

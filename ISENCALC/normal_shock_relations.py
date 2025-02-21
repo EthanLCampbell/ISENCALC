@@ -87,6 +87,7 @@ class normal_shock_ratios:
             M1 = fsolve(get_M1_from_P02oP01,2.0)
             phi = 1+gm1/2*M1**2
             results["Mach1"] = M1
+            results["Mach2"] = math.sqrt((1 + (gm1 / 2) * M1**2) / (gam * M1**2 - gm1 / 2))
             results["P2/P1"] = 1 + (2 * gam / (gam + 1)) * (M1**2 - 1)
             results["T2/T1"] = ((1 + (gm1 / 2) * M1**2) * ((2 * gam / (gam + 1) * M1**2 - gm1 / (gam + 1))) / M1**2)
             results["Rho2/Rho1"] = (gp1 * M1**2) / (gm1 * M1**2 + 2)

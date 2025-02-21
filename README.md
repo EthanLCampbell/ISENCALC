@@ -56,6 +56,7 @@ To calculate oblique shock ratios, open compressible_flows_main.py and edit the 
 In the above case, 1.4 is equal to 'gamma', the specific heat ratio of the working fluid. 
 The object input parameter must have the following value:
 + "delta" - turning angle of the working fluid
+
 As well as one of the following parameters
 + "Mach1" - Upstream mach number 
 + (other inputs WIP)

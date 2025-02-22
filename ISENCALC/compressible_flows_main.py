@@ -2,9 +2,8 @@
 #
 #                           ==== ISENCALC ====
 #                         Ethan Labianca-Campbell
-#               Purdue School of Aeronautics & Astronautics
 #               Aerodynamics and compressible flow functions 
-#                        Last Update: Feb 13, 2025
+#                        Last Update: Feb 22, 2025
 # 
 #------------------------------------------------------------------------------+
 
@@ -18,10 +17,12 @@ from isentropic_relations import isentropic_1D_ratios
 from normal_shock_relations import normal_shock_ratios
 from oblique_shock_relations import oblique_shock_ratios
 from prandtl_meyer_fan import prandtl_meyer_ratios
+
 ##====== CALLING FUNCTIONS ===================================================##
 
-#-------ISENTROPIC PROBLEMS----------------------------------------------------+
+## 1D STEADY FLOW PROBLEMS
 
+# Stagnation Relations
 '''
 Example inputs (all equivalent to M = 2.5)
     "Mach": 2.5
@@ -32,13 +33,9 @@ Example inputs (all equivalent to M = 2.5)
     "Mach_angle":  23.5781784
     "P-M Angle": 39.12356401
 '''
-
-# RUN ISENTROPIC:
 print("\n\n=== 1D ISENTROPIC RELATIONS OUTPUTS === \n")
 config = isentropic_1D_ratios(1.4, {"Mach": 2.1})
 print(config)
-
-#-------SHOCK PROBLEMS---------------------------------------------------------+
 
 # Normal Shockwave
 '''
@@ -54,21 +51,24 @@ print("\n\n=== NORMAL SHOCK RELATIONS OUTPUTS === \n")
 config = normal_shock_ratios(1.4, {"P02/P01": 0.4986428})
 print(config)
 
-
 # Oblique Shockwave
 '''
 Example inputs (all equivalent to M1=2.5)
     "Mach1": 2.5 (required input for all)
     "theta_w": 20 (turn angle of fluid, weak shock)
     "beta": 30 (wave angle)
-    
 '''
 print("\n\n=== OBLIQUE SHOCK RELATIONS OUTPUTS === \n")
 config = oblique_shock_ratios(1.4, {"Mach1": 2.5, "delta": 20})
 print(config)
 
-#------PRANDTL-MEYER FAN-----------------------------------------------------+
-
+# PRANDTL-MEYER FAN 
+'''
+Example inputs (all equivalent to M1=2.5)
+    "Mach1": 2.5 (required input for all)
+    "delta": 20 (turn angle of fluid, weak shock)
+'''
 print("\n\n=== PRANDTL-MEYER FAN OUTPUTS === \n")
 config = prandtl_meyer_ratios(1.4, {"Mach1": 2.5, "delta": 20})
 print(config)
+

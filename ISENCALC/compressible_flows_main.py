@@ -17,7 +17,7 @@ import os
 from isentropic_relations import isentropic_1D_ratios
 from normal_shock_relations import normal_shock_ratios
 from oblique_shock_relations import oblique_shock_ratios
-
+from prandtl_meyer_fan import prandtl_meyer_ratios
 ##====== CALLING FUNCTIONS ===================================================##
 
 #-------ISENTROPIC PROBLEMS----------------------------------------------------+
@@ -67,3 +67,8 @@ print("\n\n=== OBLIQUE SHOCK RELATIONS OUTPUTS === \n")
 config = oblique_shock_ratios(1.4, {"Mach1": 2.5, "delta": 20})
 print(config)
 
+#------PRANDTL-MEYER FAN-----------------------------------------------------+
+
+print("\n\n=== PRANDTL-MEYER FAN OUTPUTS === \n")
+config = prandtl_meyer_ratios(1.4, {"Mach1": 2.5, "delta": 20})
+print(config)
